@@ -8,8 +8,8 @@ funcionamiento, de esta forma se verifican atributos de calidad.
 
 ### EJECUCIÓN
 
-El proyecto puede ser ejecutado a través del runner implentado y el Run de la IDE.
-El proyecto puede ser ejecutado a través de la terminal ubicado en la raíz, con el comando: gradle clean test 
+* El proyecto puede ser ejecutado a través del runner implentado y el Run de la IDE.
+* El proyecto puede ser ejecutado a través de la terminal ubicado en la raíz, con el comando: gradle clean test 
 
 ## HERRAMIENTAS TECNOLÓGICAS
 

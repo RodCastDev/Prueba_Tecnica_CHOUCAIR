@@ -1,8 +1,10 @@
 ## PRUEBA TECNICA CHOUCAIR
 
 ### INTRODUCCIÓN 
-En estre proyecto se presenta el desarrllo de la prueba tecnica para candidatos al cargo 
-Automatización, en la cual se selccionaron algunos casos de prueba para verificar su correcta funcinalidad.
+En este proyecto se presenta el desarrollo de la prueba técnica para candidatos al cargo de
+Automatización, en la cual después de evaluar las funciones de la página, 
+se seleccionan algunos casos de prueba para validar el correcto
+funcionamiento, de esta forma se verifican atributos de calidad.
 
 ### EJECUCIÓN
 

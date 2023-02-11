@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Login Exitoso","Login exitoso","SUCCESS","2023-02-10T21:59:48.932-05:00[America/Bogota]","0.0","10.98"
+"Login Exitoso","Login No Exitoso","SUCCESS","2023-02-10T22:00:01.004-05:00[America/Bogota]","0.0","9.15"

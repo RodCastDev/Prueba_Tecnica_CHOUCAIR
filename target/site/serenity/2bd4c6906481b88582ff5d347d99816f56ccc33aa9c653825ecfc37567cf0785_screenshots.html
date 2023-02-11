@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="febd2fd611ee8497afbad9fcd603eac0ee00a4b71b5f84327110cb9f019984ed.html">Creacion De Reunion Exitosa</a></span>
+                > <span class="truncate-60"><a
+                    href="2bd4c6906481b88582ff5d347d99816f56ccc33aa9c653825ecfc37567cf0785.html">Reunion exitosa </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 10-02-2023 22:00</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Creacion De Reunion Exitosa </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Yo como postulante a la vacante Automatizador QA<br />
+Requiero ingresar en la pagina demo.serenity<br />
+y realizar ejercicios de automatizacion.
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Reunion exitosa
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="58c17b55621fd05c8b02614fd5fd973158c9f84fd7b4bae0f8fb26402c331124.png" title=" Given Deseo ir a la pagina demo.serenity" width="1366"/>
+                <img src="58c17b55621fd05c8b02614fd5fd973158c9f84fd7b4bae0f8fb26402c331124.png" title=" User opens the https://serenity.is/demo/" width="1366"/>
+                <img src="58c17b55621fd05c8b02614fd5fd973158c9f84fd7b4bae0f8fb26402c331124.png" title=" Given Deseo ir a la pagina demo.serenity (completed)" width="1366"/>
+                <img src="d395bd138718d0d2d82699dcf741ee9701f4445a0a0f2249674c0719bb0fe77c.png" title=" And ingreso con usuario &quot;admin&quot; y contrase&ntilde;a &quot;serenity&quot;" width="1366"/>
+                <img src="d395bd138718d0d2d82699dcf741ee9701f4445a0a0f2249674c0719bb0fe77c.png" title=" User login data" width="1366"/>
+                <img src="d395bd138718d0d2d82699dcf741ee9701f4445a0a0f2249674c0719bb0fe77c.png" title=" User enters 'admin' into nameIn" width="1366"/>
+                <img src="d395bd138718d0d2d82699dcf741ee9701f4445a0a0f2249674c0719bb0fe77c.png" title=" User enters 'serenity' into passIn" width="1366"/>
+                <img src="ade4777b51d20a9a3e64456917215c9c04d24960d30daaead1317d290599f1a4.png" title=" User enters 'serenity' into passIn (completed)" width="1366"/>
+                <img src="ade4777b51d20a9a3e64456917215c9c04d24960d30daaead1317d290599f1a4.png" title=" User clicks on buttonEnter" width="1366"/>
+                <img src="6190a78eeb512cc7ddeea734761827615bc6248bed14aff011af044c3c13ff9f.png" title=" User clicks on buttonEnter (completed)" width="1366"/>
+                <img src="6190a78eeb512cc7ddeea734761827615bc6248bed14aff011af044c3c13ff9f.png" title=" User login data (completed)" width="1366"/>
+                <img src="6190a78eeb512cc7ddeea734761827615bc6248bed14aff011af044c3c13ff9f.png" title=" And ingreso con usuario &quot;admin&quot; y contrase&ntilde;a &quot;serenity&quot; (completed)" width="1366"/>
+                <img src="4962d8ee93d2319599e1c49504fc8cbb9e22ba19da6b6fd1e634c3842905d4b9.png" title=" When voy la pagina de Meetings" width="1366"/>
+                <img src="4962d8ee93d2319599e1c49504fc8cbb9e22ba19da6b6fd1e634c3842905d4b9.png" title=" User selec menu" width="1366"/>
+                <img src="087f8dca4c8f89fefc49d1970c0cc599b5527ed3635c115f15428965d6cede3a.png" title=" User clicks on boton_MenuReuniones" width="1366"/>
+                <img src="a953b8fa8f45ae9d70cd318b965b187ae477ac700f8fca8a7304fd0322b469f1.png" title=" User clicks on boton_MenuReuniones (completed)" width="1366"/>
+                <img src="a953b8fa8f45ae9d70cd318b965b187ae477ac700f8fca8a7304fd0322b469f1.png" title=" User clicks on boton_SubReuniones" width="1366"/>
+                <img src="85571838307adc052cd1323267ed5f42326769cd4006d2bced54b76be2e1f26f.png" title=" User clicks on boton_SubReuniones (completed)" width="1366"/>
+                <img src="85571838307adc052cd1323267ed5f42326769cd4006d2bced54b76be2e1f26f.png" title=" User selec menu (completed)" width="1366"/>
+                <img src="85571838307adc052cd1323267ed5f42326769cd4006d2bced54b76be2e1f26f.png" title=" When voy la pagina de Meetings (completed)" width="1366"/>
+                <img src="f350b373a59ffa2c1a0098245615160d48200378d540442decc63bee8906e9fd.png" title=" When creo una nueva reunion, llenando los datos del formulario
+| MeetingName | Type | Number | StarDate | StarTime | EndDate | EndTime | Location | Unit | OrganizedBy | Reporter | Attendee |
+| technical interview | General | 01 | 02/22/2023 | 10:00 | 02/22/2023 | 11:00 | On Site | Administration | Aaron Taylor | Aaron Taylor | Aaron Taylor,Adam Edwards,Adam Stewart |" width="1366"/>
+                <img src="f350b373a59ffa2c1a0098245615160d48200378d540442decc63bee8906e9fd.png" title=" User add new meeting" width="1366"/>
+                <img src="f350b373a59ffa2c1a0098245615160d48200378d540442decc63bee8906e9fd.png" title=" User clicks on nueva_reunion" width="1366"/>
+                <img src="80203d1ee570fdc26fba1cd7cbeade872943e2541b2a40225e54a5556fa0b30a.png" title=" User clicks on nueva_reunion (completed)" width="1366"/>
+                <img src="8e379885eb0a586fbaa831ec353f78b4f9d2afdffacd4462a5418eabf7bdcae1.png" title=" User clicks on Form-meetType" width="1366"/>
+                <img src="33f4a1de0565ad4fef159d26f8f5ef252b3df930682ed070d765386704d67adf.png" title=" User clicks on Form-meetType (completed)" width="1366"/>
+                <img src="416657ec4c0502364c07a3920ace775bc7ab58a7d12fa9e3426ebe4f8cbe1859.png" title=" User clicks on Form-meetLocation" width="1366"/>
+                <img src="39f290ec9c71877e3c29fe275fe47660fb0fd7d3ad6f17ebbab2ae76419adb5c.png" title=" User clicks on Form-meetLocation (completed)" width="1366"/>
+                <img src="6808cdb37608c47ca7126fbd64554d0228778247f5315f5326cb8a8578bd2ec7.png" title=" User clicks on Form-meetUnit" width="1366"/>
+                <img src="17ab5726d6b12768b55973caefedfecf58baa99c0c3354eaee594c99a3b61ac7.png" title=" User clicks on Form-meetUnit (completed)" width="1366"/>
+                <img src="daaf1c5aefe139aebddea2dc54e9dd4a8d1a1c6b003f09b05aa3c915e234c596.png" title=" User clicks on Form-meetOrganized" width="1366"/>
+                <img src="02d5e5b5ecb5c7036e41837b5cacc265c5952f88fa8a13e7eaf4b541d1c2c17d.png" title=" User clicks on Form-meetOrganized (completed)" width="1366"/>
+                <img src="9b89f24bf035e6caf3a2b7d6fd1a6e216fa991a52cb299a9daff22b0001639c5.png" title=" User clicks on Form-meetReporter" width="1366"/>
+                <img src="e99078a38a0ad417f43b1fea9c016cba12105f7712f1953abbb05b9266f2b6f5.png" title=" User clicks on Form-meetReporter (completed)" width="1366"/>
+                <img src="2ed5079ff647321b0a7ff0717b25050b7fc3f08743d79e9e38e61ce397e0e5e4.png" title=" User clicks on Form-meetAttendeeList" width="1366"/>
+                <img src="d7344d80a87534e8f5cae4ef0739700a84c470b147c5fc42f7a42654481ac4f9.png" title=" User clicks on Form-meetAttendeeList (completed)" width="1366"/>
+                <img src="9d0e455ae2c3ecd64aeaa5bf48fa6045ebc28b85d20317a3919aaca82feaabdd.png" title=" User clicks on Form-meetAttendeeList" width="1366"/>
+                <img src="9941eaaf9a96daea03946c37bceca24af373c86e35e9713331d09260f401c1b7.png" title=" User clicks on Form-meetAttendeeList (completed)" width="1366"/>
+                <img src="0f02ba764ba046f533bb07dd948d9ff7799b1e00fc76c1456cdd6a7f01279fc9.png" title=" User clicks on Form-meetAttendeeList" width="1366"/>
+                <img src="2cdeec9d3ed3629c550d328033d128eded6d8eac40f9278a5938d3a522a5be47.png" title=" User clicks on Form-meetAttendeeList (completed)" width="1366"/>
+                <img src="0f02ba764ba046f533bb07dd948d9ff7799b1e00fc76c1456cdd6a7f01279fc9.png" title=" User clicks on Form-meetStartDate" width="1366"/>
+                <img src="db965e62235d3d8cf6b3bf28afc81c347ba0d5502a262d8ebdf9a0f2e6f67272.png" title=" User clicks on Form-meetStartDate (completed)" width="1366"/>
+                <img src="db965e62235d3d8cf6b3bf28afc81c347ba0d5502a262d8ebdf9a0f2e6f67272.png" title=" User clears field Form-meetStartDate" width="1366"/>
+                <img src="b57d79e0280b8195319a0d6a451d0d50eca51457289bd82f28f00882e6d3c462.png" title=" User clears field Form-meetStartDate (completed)" width="1366"/>
+                <img src="a4ae86f851368e5c00595d203d36fe844b09e9993f848b15d0624a60e3982778.png" title=" User clicks on Form-meetEndDate" width="1366"/>
+                <img src="6bebcb9441e0e0db72e57674e2c448b74d8951e98721bf860deda60f91d20b5f.png" title=" User clicks on Form-meetEndDate (completed)" width="1366"/>
+                <img src="6bebcb9441e0e0db72e57674e2c448b74d8951e98721bf860deda60f91d20b5f.png" title=" User clears field Form-meetEndDate" width="1366"/>
+                <img src="78f5fab6130fabba29a72622e5e495e7822eda010c8ac1d3f0c2401e48767fc6.png" title=" User clears field Form-meetEndDate (completed)" width="1366"/>
+                <img src="27ad92b1cf004974f5f0d90449db439c1e28fd6c503cdabc2f10ce31fd2cee59.png" title=" User clicks on buttonSave" width="1366"/>
+                <img src="7581f217f20c700a7f3d3cde90f033df11916858ece84a89fd15a9c633306802.png" title=" User clicks on buttonSave (completed)" width="1366"/>
+                <img src="7581f217f20c700a7f3d3cde90f033df11916858ece84a89fd15a9c633306802.png" title=" User add new meeting (completed)" width="1366"/>
+                <img src="7581f217f20c700a7f3d3cde90f033df11916858ece84a89fd15a9c633306802.png" title=" When creo una nueva reunion, llenando los datos del formulario
+| MeetingName | Type | Number | StarDate | StarTime | EndDate | EndTime | Location | Unit | OrganizedBy | Reporter | Attendee |
+| technical interview | General | 01 | 02/22/2023 | 10:00 | 02/22/2023 | 11:00 | On Site | Administration | Aaron Taylor | Aaron Taylor | Aaron Taylor,Adam Edwards,Adam Stewart | (completed)" width="1366"/>
+                <img src="794a5a2d5a644b78d92683bc0809fef74eac710683f2fa1c8da111e26aa5f832.png" title=" Then valido la creacion de la reunion &quot;technical interview&quot;" width="1366"/>
+                <img src="794a5a2d5a644b78d92683bc0809fef74eac710683f2fa1c8da111e26aa5f832.png" title=" Then validate new meet" width="1366"/>
+                <img src="794a5a2d5a644b78d92683bc0809fef74eac710683f2fa1c8da111e26aa5f832.png" title=" Then valido la creacion de la reunion &quot;technical interview&quot; (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.0</span>
+</div>
+</body>
+</html>
